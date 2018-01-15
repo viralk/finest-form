@@ -107,6 +107,14 @@
 
 
 /* Draft */
+.radio-group label {
+  font-size: 15px;
+  font-weight: 400;
+  color: #999;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
 input[type="radio"]:after {
   content: "";
   display: block;
