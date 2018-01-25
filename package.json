@@ -1,7 +1,7 @@
 {
   "name": "finest-form",
   "version": "0.0.1",
-  "description": "Get better form for your website",
+  "description": "Form inputs design for websites",
   "author": "Manuel Coiai",
   "license": "MIT",
   "dependencies": {
