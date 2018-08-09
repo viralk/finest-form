@@ -1,8 +1,8 @@
 {
   "name": "finest-form",
-  "version": "0.0.1",
-  "description": "Form inputs design for websites",
-  "author": "Manuel Coiai",
+  "version": "0.1.0",
+  "description": "Form inputs style for websites",
+  "author": "Manuel Coiai <manuel.coiai@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "gulp": "^3.9.1"
