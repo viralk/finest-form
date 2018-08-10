@@ -6,8 +6,8 @@ let uglify = require('gulp-uglify');
 gulp.task('default', [
   'sass-compile',
   'sass-compile-min',
-  'js-compile',
-  'js-compile-min'
+  'js-compile'
+  // 'js-compile-min'
 ]);
 
 gulp.task('sass-compile', function() {
