@@ -11,34 +11,8 @@ Finest-form provides a lightweight style and animation for input, labels, radio,
 <!-- - Install with [npm](https://www.npmjs.com/): `npm install finest-form` -->
 <!-- - Install with [yarn](https://yarnpkg.com/): `yarn add ` -->
 
-To start using Finest-Form you must include the relative css and js files in your project. For more in depth guide on how to use finest-form see the [usage section](#usage).
-
-## What's included
-
-Within the download, in the ```dist/``` folder, you'll find both standard and minified variations of the assets. They are ready to use. You'll see something like this:
-
-```
-finest-form/
-└── dist/
-    ├── css/
-    │   ├── finest-form.css
-    │   └── finest-form.min.css
-    └── js/
-        ├── finest-form.js
-        └── finest-form.min.js
-```
-
-In the src/ folder you will find the source files for the project, allowing you to customize the appearance and animation of the elements. For more information on customization see the [customization section](#customization).
-
-```
-finest-form/
-└── src/
-    ├── scss/
-    │   └── finest-form.scss
-    └── js/
-        └── finest-form.js
-```
-
 ## Usage
+
+To start using Finest-Form you must include the relative css and js files in your project. The files ready to be included are located inside the `dist/` folder. The files are available in standard and minified version.
 
 ## Customization
