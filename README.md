@@ -4,7 +4,7 @@
 
 Finest-form provides a lightweight style and animation for input, labels, radio, checkboxes and other form elements. The project is currently work in progress and is not meant to be used in production.
 
-### Installation
+## Installation
 
 - [Download the latest release.](https://github.com/viralk/finest-form/archive/master.zip)
 - Clone the repo: `git clone https://github.com/viralk/finest-form.git`
@@ -13,7 +13,7 @@ Finest-form provides a lightweight style and animation for input, labels, radio,
 
 To start using Finest-Form you must include the relative css and js files in your project. For more in depth guide on how to use finest-form see the [usage section](#usage).
 
-### What's included
+## What's included
 
 Within the download, in the ```dist/``` folder, you'll find both standard and minified variations of the assets. They are ready to use. You'll see something like this:
 
@@ -39,6 +39,6 @@ finest-form/
         └── finest-form.js
 ```
 
-### Usage
+## Usage
 
-### Customization
+## Customization
