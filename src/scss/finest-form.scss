@@ -56,8 +56,8 @@ $border-radius: 5px;
     left: 15px;
     font-weight: 400;
     color: #999;
-    -webkit-transition: all .15s linear;
-    -moz-transition: all .15s linear;
+    // -webkit-transition: all .15s linear;
+    // -moz-transition: all .15s linear;
     transition: all .15s linear;
   }
 
@@ -89,8 +89,8 @@ $border-radius: 5px;
   input[type="file"],
   input[type="email"] {
     padding: 12px 10px;
-    -webkit-transition: all .15s linear;
-    -moz-transition: all .15s linear;
+    // -webkit-transition: all .15s linear;
+    // -moz-transition: all .15s linear;
     transition: all .15s linear;
 
     ~ label {
@@ -124,13 +124,17 @@ $border-radius: 5px;
 
   input[type="radio"] {
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background: transparent;
     display: inline-block;
     width: 20px;
     height: 20px;
-    -webkit-box-shadow: 0 0 0 0 $primary-color inset;
-    -moz-box-shadow: 0 0 0 0 $primary-color inset;
+    // -webkit-box-shadow: 0 0 0 0 $primary-color inset;
+    // -moz-box-shadow: 0 0 0 0 $primary-color inset;
     box-shadow: 0 0 0 0 $primary-color inset;
+    // -webkit-transition: all .2s ease-in-out;
+    // -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     position: relative;
     cursor: pointer;
@@ -147,8 +151,8 @@ $border-radius: 5px;
     position: absolute;
     top: 50%;
     left: 50%;
-    -moz-transition: all .2s ease-in-out .1s;
-    -webkit-transition: all .2s ease-in-out .1s;
+    // -webkit-transition: all .2s ease-in-out .1s;
+    // -moz-transition: all .2s ease-in-out .1s;
     transition: all .2s ease-in-out .1s;
     width: 6px;
     height: 6px;
@@ -160,8 +164,8 @@ $border-radius: 5px;
 
   input[type="radio"]:checked {
     border: none;
-    -webkit-box-shadow: 0 0 0 10px $primary-color inset;
-    -moz-box-shadow: 0 0 0 10px $primary-color inset;
+    // -webkit-box-shadow: 0 0 0 10px $primary-color inset;
+    // -moz-box-shadow: 0 0 0 10px $primary-color inset;
     box-shadow: 0 0 0 10px $primary-color inset;
   }
 }

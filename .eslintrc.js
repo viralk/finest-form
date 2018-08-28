@@ -14,5 +14,6 @@ module.exports = {
       "max-len": 0,
       "wrap-iife": 0,
       "func-names": 0,
+      "prefer-arrow-callback": 0,
   }
 };

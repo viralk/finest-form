@@ -1,32 +1,32 @@
-let gulp = require('gulp');
-let sass = require('gulp-sass');
-let rename = require('gulp-rename');
-let uglify = require('gulp-uglify');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const rename = require('gulp-rename');
+// const uglify = require('gulp-uglify');
 
 gulp.task('default', [
   'sass-compile',
   'sass-compile-min',
-  'js-compile'
+  'js-compile',
   // 'js-compile-min'
 ]);
 
-gulp.task('sass-compile', function() {
+gulp.task('sass-compile', function () {
   return gulp.src('src/scss/finest-form.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('sass-compile-min', function() {
+gulp.task('sass-compile-min', function () {
   return gulp.src('src/scss/finest-form.scss')
     .pipe(rename('finest-form.min.css'))
     .pipe(sass().on('error', sass.logError))
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('js-compile', function() {
+gulp.task('js-compile', function () {
   return gulp.src('src/js/finest-form.js')
-  .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'));
 });
 
 // gulp.task('js-compile-min', function() {
