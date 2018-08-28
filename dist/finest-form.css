@@ -28,8 +28,6 @@
     left: 15px;
     font-weight: 400;
     color: #999;
-    -webkit-transition: all .15s linear;
-    -moz-transition: all .15s linear;
     transition: all .15s linear; }
   .input-group input[type],
   .input-group select {
@@ -56,8 +54,6 @@
   .input-group input[type="file"],
   .input-group input[type="email"] {
     padding: 12px 10px;
-    -webkit-transition: all .15s linear;
-    -moz-transition: all .15s linear;
     transition: all .15s linear; }
     .input-group input[type="url"] ~ label,
     .input-group input[type="text"] ~ label,
@@ -86,12 +82,12 @@
 
 .radio-group input[type="radio"] {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background: transparent;
   display: inline-block;
   width: 20px;
   height: 20px;
-  -webkit-box-shadow: 0 0 0 0 #33C3F0 inset;
-  -moz-box-shadow: 0 0 0 0 #33C3F0 inset;
   box-shadow: 0 0 0 0 #33C3F0 inset;
   transition: all .2s ease-in-out;
   position: relative;
@@ -108,8 +104,6 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -moz-transition: all .2s ease-in-out .1s;
-  -webkit-transition: all .2s ease-in-out .1s;
   transition: all .2s ease-in-out .1s;
   width: 6px;
   height: 6px;
@@ -120,6 +114,4 @@
 
 .radio-group input[type="radio"]:checked {
   border: none;
-  -webkit-box-shadow: 0 0 0 10px #33C3F0 inset;
-  -moz-box-shadow: 0 0 0 10px #33C3F0 inset;
   box-shadow: 0 0 0 10px #33C3F0 inset; }
