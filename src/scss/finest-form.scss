@@ -72,8 +72,8 @@ $border-radius: 5px;
     margin-bottom: 10px;
     box-sizing: border-box;
 
-    :focus {
-      box-shadow: $primary-color;
+    &:focus {
+      box-shadow: 0 0 0 2px $primary-color;
     }
   }
 
