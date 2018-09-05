@@ -1,5 +1,5 @@
 // ========================================
-// Finest-form v. 0.0.1
+// Finest-form v. 0.1.0
 // Copyright 2018, Manuel Coiai
 // https://github.com/viralk/finest-form
 // ========================================
@@ -10,6 +10,9 @@
 // ========================================
 $font-size: 13px;
 $primary-color: #33C3F0;
+$grey-color: #999;
+$border-color: #DDD;
+$background-color: #FFF;
 $border-radius: 5px;
 
 
@@ -18,30 +21,61 @@ $border-radius: 5px;
 // ========================================
 ::-webkit-input-placeholder {
   /* WebKit, Blink, Edge */
-  color: #999;
+  color: $grey-color;
 }
 
 :-moz-placeholder {
   /* Mozilla Firefox 4 to 18 */
-  color: #999;
+  color: $grey-color;
   opacity: 1;
 }
 
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
-  color: #999;
+  color: $grey-color;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #999;
+  color: $grey-color;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #999;
+  color: $grey-color;
 }
+
+
+
+// ========================================
+// General
+// ========================================
+%label {
+  font-size: 80%;
+  position: absolute;
+  top: round($font-size / 2.6);
+  left: round($font-size / 1.3);
+  font-weight: 400;
+  color: $grey-color;
+  transition: all .15s linear;
+}
+%input {
+  border: 0;
+  border-radius: $border-radius;
+  background-color: $background-color;
+  box-shadow: 0 0 0 1px $border-color;
+  font-size: $font-size;
+  width: 100%;
+  height: round($font-size * 3.46);
+  margin-bottom: round($font-size / 1.3);
+  box-sizing: border-box;
+
+  &:focus {
+    box-shadow: 0 0 0 2px $primary-color;
+  }
+}
+
 
 
 // ========================================
@@ -51,30 +85,11 @@ $border-radius: 5px;
   position: relative;
   
   label {
-    font-size: 80%;
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    font-weight: 400;
-    color: #999;
-    transition: all .15s linear;
+    @extend %label;
   }
 
-  input[type],
-  select {
-    border: 0;
-    border-radius: $border-radius;
-    background-color: #fff;
-    box-shadow: 0 0 0 1px #ddd;
-    font-size: $font-size;
-    width: 100%;
-    height: 45px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-
-    &:focus {
-      box-shadow: 0 0 0 2px $primary-color;
-    }
+  input[type] {
+    @extend %input;
   }
 
   input[type="url"],
@@ -87,7 +102,7 @@ $border-radius: 5px;
   input[type="month"],
   input[type="file"],
   input[type="email"] {
-    padding: 12px 10px;
+    padding: round($font-size / 1.08) round($font-size / 1.3);
     transition: all .15s linear;
 
     ~ label {
@@ -99,12 +114,48 @@ $border-radius: 5px;
   input[type="time"],
   input[type="datetime-local"],
   input[type="date"],
-  input[type="color"],
-  select {
-    padding: 20px 10px 4px;
+  input[type="color"] {
+    padding: round($font-size * 1.54) round($font-size / 1.3) round($font-size / 3.25);
   }
 
 }
+
+
+
+// ========================================
+// Select style
+// ========================================
+.select-group {
+  position: relative;
+
+  label {
+    @extend %label;
+  }
+
+  select {
+    @extend %input;
+    padding: round($font-size * 1.54) round($font-size / 1.3) round($font-size / 3.25);
+  }
+
+  &:after {
+    content: "\2BC6";
+    position: absolute;
+    top: 0;
+    right: round($font-size / 3.25);
+    margin: round($font-size / 1.3) 0;
+    padding-top: round($font-size / 3.25);
+    padding-right: round($font-size / 1.62);
+    padding-bottom: round($font-size / 3.25);
+    padding-left: round($font-size / 1.08);
+    background-color: $background-color;
+    border-left: 1px solid $border-color;
+    color: $grey-color;
+    font-size: round($font-size / 1.08);
+    pointer-events: none;
+  }
+
+}
+
 
 
 // ========================================
@@ -125,16 +176,16 @@ $border-radius: 5px;
     appearance: none;
     background: transparent;
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: round($font-size * 1.54);
+    height: round($font-size * 1.54);
     box-shadow: 0 0 0 0 $primary-color inset;
     transition: all .2s ease-in-out;
     position: relative;
     cursor: pointer;
-    vertical-align: -8px;
+    vertical-align: 0 - round($font-size / 1.85); //-7px
     border-radius: 50%;
     padding: 0;
-    border: 1px solid #ddd;
+    border: 1px solid $border-color;
     outline-color: transparent;
   }
 
@@ -145,19 +196,20 @@ $border-radius: 5px;
     top: 50%;
     left: 50%;
     transition: all .2s ease-in-out .1s;
-    width: 6px;
-    height: 6px;
-    margin-left: -3px;
-    margin-top: -3px;
-    background-color: #fff;
+    width: round($font-size / 2.16);
+    height: round($font-size / 2.16);
+    margin-left: 0 - round($font-size / 4.33);
+    margin-top: 0 - round($font-size / 4.33);
+    background-color: $background-color;
     border-radius: 50%;
   }
 
   input[type="radio"]:checked {
     border-color: $primary-color;
-    box-shadow: 0 0 0 10px $primary-color inset;
+    box-shadow: 0 0 0 $font-size $primary-color inset;
   }
 }
+
 
 
 // ========================================
@@ -186,7 +238,7 @@ $border-radius: 5px;
     vertical-align: -5px;
     border-radius: 5px;
     padding: 0;
-    border: 1px solid #ddd;
+    border: 1px solid $border-color;
     outline-color: transparent;
   }
 
@@ -197,7 +249,7 @@ $border-radius: 5px;
 
   input[type="checkbox"]:checked:after {
     content: "\2714";
-    color: #fff;
+    color: $background-color;
     position: absolute;
     left: 20%;
   }
