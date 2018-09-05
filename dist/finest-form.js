@@ -1,5 +1,5 @@
 function modifyInputStyle(input) {
-  input.style.padding = '20px 10px 6px';
+  input.style.padding = '20px 10px 4px';
   input.nextElementSibling.style.opacity = '1';
 }
 
@@ -8,6 +8,7 @@ function resetInputStyle(input) {
   input.style.padding = '12px 10px';
   input.nextElementSibling.style.opacity = '0';
 }
+
 
 (function () {
   const IGNORE_KEYS = [9, 13, 16, 17, 18, 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 40, 44, 45, 91, 92, 93, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 144, 145];
@@ -32,4 +33,4 @@ function resetInputStyle(input) {
       }
     });
   }
-})();
+}());
