@@ -78,6 +78,15 @@
   position: relative; }
   .select-group select {
     padding: 20px 10px 4px; }
+  .select-group:before {
+    content: '';
+    padding: 22.49px;
+    background-color: #FFF;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5px;
+    pointer-events: none; }
   .select-group:after {
     content: "\2BC6";
     position: absolute;

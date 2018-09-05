@@ -8,7 +8,13 @@
 // ========================================
 // Config
 // ========================================
+
+// the font size is used to determine the size of all the elements of the form.
+// By varying the font size the elements will automatically adapt to the new 
+// dimension
 $font-size: 13px;
+
+// Change the following value to adapt the form elements to your style
 $primary-color: #33C3F0;
 $grey-color: #999;
 $border-color: #DDD;
@@ -135,6 +141,17 @@ $border-radius: 5px;
   select {
     @extend %input;
     padding: round($font-size * 1.54) round($font-size / 1.3) round($font-size / 3.25);
+  }
+
+  &:before {
+    content: '';
+    padding: $font-size * 1.73;
+    background-color: $background-color;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: $border-radius;
+    pointer-events: none;
   }
 
   &:after {

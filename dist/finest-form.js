@@ -1,3 +1,4 @@
+// includes() non è compatibile con IE11, va cambiato con IndexOf
 function modifyInputStyle(input) {
   input.style.padding = '20px 10px 4px';
   input.nextElementSibling.style.opacity = '1';
