@@ -1,5 +1,5 @@
 // ========================================
-// Finest-form v. 0.1.0
+// Finest-form v. 0.2.0
 // Copyright 2018, Manuel Coiai
 // https://github.com/viralk/finest-form
 // ========================================
@@ -203,32 +203,33 @@ $border-radius: 5px;
     transition: all .2s ease-in-out;
     position: relative;
     cursor: pointer;
-    vertical-align: 0 - round($font-size / 1.85); //-7px
+    vertical-align: 0 - round($font-size / 1.85);
     border-radius: 50%;
     padding: 0;
     border: 1px solid $border-color;
     outline-color: transparent;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: all .2s ease-in-out .1s;
+      width: round($font-size / 2.16);
+      height: round($font-size / 2.16);
+      margin-left: 0 - round($font-size / 4.33);
+      margin-top: 0 - round($font-size / 4.33);
+      background-color: $background-color;
+      border-radius: 50%;
+    }
+
+    &:checked {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 $font-size $primary-color inset;
+    }
   }
 
-  input[type="radio"]:after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transition: all .2s ease-in-out .1s;
-    width: round($font-size / 2.16);
-    height: round($font-size / 2.16);
-    margin-left: 0 - round($font-size / 4.33);
-    margin-top: 0 - round($font-size / 4.33);
-    background-color: $background-color;
-    border-radius: 50%;
-  }
-
-  input[type="radio"]:checked {
-    border-color: $primary-color;
-    box-shadow: 0 0 0 $font-size $primary-color inset;
-  }
 }
 
 
@@ -260,19 +261,20 @@ $border-radius: 5px;
     padding: 0;
     border: 1px solid $border-color;
     outline-color: transparent;
+
+    &:checked {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 10px $primary-color inset;
+    }
+
+    &:checked:after {
+      content: "\2714";
+      color: $background-color;
+      position: absolute;
+      left: 20%;
+    }
   }
 
-   input[type="checkbox"]:checked {
-    border-color: $primary-color;
-    box-shadow: 0 0 0 10px $primary-color inset;
-  }
-
-  input[type="checkbox"]:checked:after {
-    content: "\2714";
-    color: $background-color;
-    position: absolute;
-    left: 20%;
-  }
 }
 
 
@@ -295,32 +297,25 @@ input[type="button"] {
   font-weight: bolder;
   font-size: $font-size;
   cursor: pointer;
-}
 
-button:hover,
-.button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
-  box-shadow: 0 0 0 2px $border-color;
-}
+  &:hover {
+    box-shadow: 0 0 0 2px $border-color;
+  }
 
-button:focus,
-.button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
-  outline: 0;
+  &:focus {
+    outline: 0;
+  }
 }
 
 .button-primary {
   border-color: $primary-color;
   background-color: $primary-color;
   color: $background-color;
-}
-.button-primary:hover {
-  box-shadow: none;
-  opacity: .8;
+
+  &:hover {
+    box-shadow: none;
+    opacity: .8;
+  }
 }
 
 .button-ghost {

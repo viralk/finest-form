@@ -129,24 +129,22 @@
   padding: 0;
   border: 1px solid #DDD;
   outline-color: transparent; }
-
-.radio-group input[type="radio"]:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transition: all .2s ease-in-out .1s;
-  width: 6px;
-  height: 6px;
-  margin-left: -3px;
-  margin-top: -3px;
-  background-color: #FFF;
-  border-radius: 50%; }
-
-.radio-group input[type="radio"]:checked {
-  border-color: #33C3F0;
-  box-shadow: 0 0 0 13px #33C3F0 inset; }
+  .radio-group input[type="radio"]:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all .2s ease-in-out .1s;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    margin-top: -3px;
+    background-color: #FFF;
+    border-radius: 50%; }
+  .radio-group input[type="radio"]:checked {
+    border-color: #33C3F0;
+    box-shadow: 0 0 0 13px #33C3F0 inset; }
 
 .checkbox-group label {
   font-size: 13px;
@@ -171,16 +169,14 @@
   padding: 0;
   border: 1px solid #DDD;
   outline-color: transparent; }
-
-.checkbox-group input[type="checkbox"]:checked {
-  border-color: #33C3F0;
-  box-shadow: 0 0 0 10px #33C3F0 inset; }
-
-.checkbox-group input[type="checkbox"]:checked:after {
-  content: "\2714";
-  color: #FFF;
-  position: absolute;
-  left: 20%; }
+  .checkbox-group input[type="checkbox"]:checked {
+    border-color: #33C3F0;
+    box-shadow: 0 0 0 10px #33C3F0 inset; }
+  .checkbox-group input[type="checkbox"]:checked:after {
+    content: "\2714";
+    color: #FFF;
+    position: absolute;
+    left: 20%; }
 
 button,
 .button,
@@ -198,29 +194,26 @@ input[type="button"] {
   font-weight: bolder;
   font-size: 13px;
   cursor: pointer; }
-
-button:hover,
-.button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover,
-input[type="button"]:hover {
-  box-shadow: 0 0 0 2px #DDD; }
-
-button:focus,
-.button:focus,
-input[type="submit"]:focus,
-input[type="reset"]:focus,
-input[type="button"]:focus {
-  outline: 0; }
+  button:hover,
+  .button:hover,
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  input[type="button"]:hover {
+    box-shadow: 0 0 0 2px #DDD; }
+  button:focus,
+  .button:focus,
+  input[type="submit"]:focus,
+  input[type="reset"]:focus,
+  input[type="button"]:focus {
+    outline: 0; }
 
 .button-primary {
   border-color: #33C3F0;
   background-color: #33C3F0;
   color: #FFF; }
-
-.button-primary:hover {
-  box-shadow: none;
-  opacity: .8; }
+  .button-primary:hover {
+    box-shadow: none;
+    opacity: .8; }
 
 .button-ghost {
   border: 0; }
