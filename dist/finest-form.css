@@ -196,6 +196,7 @@ input[type="button"] {
   background-color: #FFF;
   text-align: center;
   font-weight: bolder;
+  font-size: 13px;
   cursor: pointer; }
 
 button:hover,
