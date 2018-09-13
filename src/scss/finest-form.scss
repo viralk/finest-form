@@ -23,6 +23,14 @@ $border-radius: 5px;
 
 
 // ========================================
+// Config
+// ========================================
+* {
+  box-sizing: border-box;
+}
+
+
+// ========================================
 // Browser-compatibility
 // ========================================
 ::-webkit-input-placeholder {
@@ -53,7 +61,6 @@ $border-radius: 5px;
 }
 
 
-
 // ========================================
 // General
 // ========================================
@@ -81,7 +88,6 @@ $border-radius: 5px;
     box-shadow: 0 0 0 2px $primary-color;
   }
 }
-
 
 
 // ========================================
@@ -125,7 +131,6 @@ $border-radius: 5px;
   }
 
 }
-
 
 
 // ========================================
@@ -172,7 +177,6 @@ $border-radius: 5px;
   }
 
 }
-
 
 
 // ========================================
@@ -228,7 +232,6 @@ $border-radius: 5px;
 }
 
 
-
 // ========================================
 // Checkbox style
 // ========================================
@@ -270,4 +273,55 @@ $border-radius: 5px;
     position: absolute;
     left: 20%;
   }
+}
+
+
+// ========================================
+// Submit style
+// ========================================
+button,
+.button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: block;
+  width: 100%;
+  padding: round($font-size * 1.15) round($font-size * 1.92);
+  margin-bottom: round($font-size / 1.13);
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  background-color: $background-color;
+  text-align: center;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+button:hover,
+.button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+  box-shadow: 0 0 0 2px $border-color;
+}
+
+button:focus,
+.button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  outline: 0;
+}
+
+.button-primary {
+  border-color: $primary-color;
+  background-color: $primary-color;
+  color: $background-color;
+}
+.button-primary:hover {
+  box-shadow: none;
+  opacity: .8;
+}
+
+.button-ghost {
+  border: 0;
 }
