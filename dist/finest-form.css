@@ -30,7 +30,8 @@
   left: 10px;
   font-weight: 400;
   color: #999;
-  transition: all .15s linear; }
+  transition: all .15s linear;
+  pointer-events: none; }
 
 .input-group input[type], .select-group select {
   border: 0;
