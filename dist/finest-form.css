@@ -63,39 +63,6 @@
     .input-group input[type="file"].active,
     .input-group input[type="email"].active {
       padding-bottom: 0; }
-    .input-group input[type="url"].input--success,
-    .input-group input[type="text"].input--success,
-    .input-group input[type="tel"].input--success,
-    .input-group input[type="search"].input--success,
-    .input-group input[type="range"].input--success,
-    .input-group input[type="password"].input--success,
-    .input-group input[type="number"].input--success,
-    .input-group input[type="month"].input--success,
-    .input-group input[type="file"].input--success,
-    .input-group input[type="email"].input--success {
-      box-shadow: 0 0 0 2px green; }
-    .input-group input[type="url"].input--warning,
-    .input-group input[type="text"].input--warning,
-    .input-group input[type="tel"].input--warning,
-    .input-group input[type="search"].input--warning,
-    .input-group input[type="range"].input--warning,
-    .input-group input[type="password"].input--warning,
-    .input-group input[type="number"].input--warning,
-    .input-group input[type="month"].input--warning,
-    .input-group input[type="file"].input--warning,
-    .input-group input[type="email"].input--warning {
-      box-shadow: 0 0 0 2px yellow; }
-    .input-group input[type="url"].input--error,
-    .input-group input[type="text"].input--error,
-    .input-group input[type="tel"].input--error,
-    .input-group input[type="search"].input--error,
-    .input-group input[type="range"].input--error,
-    .input-group input[type="password"].input--error,
-    .input-group input[type="number"].input--error,
-    .input-group input[type="month"].input--error,
-    .input-group input[type="file"].input--error,
-    .input-group input[type="email"].input--error {
-      box-shadow: 0 0 0 2px red; }
 
 .select-group {
   position: relative; }

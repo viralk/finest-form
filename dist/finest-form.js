@@ -16,9 +16,9 @@ function removeClass(el, className) {
 
 
 (function () {
-  const $input = document.querySelectorAll('.input-group input');
+  var $input = document.querySelectorAll('.input-group input');
 
-  for (let i = 0; i < $input.length; i += 1) {
+  for (var i = 0; i < $input.length; i += 1) {
     $input[i].addEventListener('keyup', function () {
       if (this.value) {
         addClass(this, 'active');
