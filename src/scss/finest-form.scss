@@ -15,7 +15,12 @@
 $font-size: 13px;
 
 // Change the following value to adapt the form elements to your style
-$primary-color: #33C3F0;
+// $primary-color: #33C3F0;
+// $grey-color: #999;
+// $border-color: #DDD;
+// $background-color: #FFF;
+// $border-radius: 5px;
+$primary-color: #53124A;
 $grey-color: #999;
 $border-color: #DDD;
 $background-color: #FFF;
@@ -27,37 +32,20 @@ $border-radius: 5px;
 // ========================================
 * {
   box-sizing: border-box;
+  // font-family: 'Roboto', sans-serif;
 }
 
 
 // ========================================
 // Browser-compatibility
 // ========================================
-::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: $grey-color;
-}
-
-:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: $grey-color;
-  opacity: 1;
-}
-
-::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: $grey-color;
-  opacity: 1;
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: $grey-color;
-}
-
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
 ::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: $grey-color;
+  color: transparent;
+  opacity: 0;
 }
 
 
@@ -65,14 +53,14 @@ $border-radius: 5px;
 // General
 // ========================================
 %label {
-  font-size: 80%;
+  font-size: $font-size;
   position: absolute;
-  top: round($font-size / 2.6);
-  left: round($font-size / 1.3);
+  top: round($font-size * 1.15);
+  left: round($font-size * 1.15);
   font-weight: 400;
-  color: $grey-color;
-  transition: all .15s linear;
+  transition: transform .1s ease-in-out;
   pointer-events: none;
+  padding: inherit;
 }
 %input {
   border: 0;
@@ -81,9 +69,11 @@ $border-radius: 5px;
   box-shadow: 0 0 0 1px $border-color;
   font-size: $font-size;
   width: 100%;
-  height: round($font-size * 3.46);
-  margin-bottom: round($font-size / 1.3);
+  height: round($font-size * 3.5);
+  margin-bottom: round($font-size * 1.15);
   box-sizing: border-box;
+  outline-color: transparent;
+  outline-style: none;
 
   &:focus {
     box-shadow: 0 0 0 2px $primary-color;
@@ -99,6 +89,12 @@ $border-radius: 5px;
   
   label {
     @extend %label;
+
+    &.active {
+      transform: translateY(-60%) scale(0.9);
+      transform-origin: left;
+      opacity: 0.6;
+    }
   }
 
   input[type] {
@@ -115,21 +111,27 @@ $border-radius: 5px;
   input[type="month"],
   input[type="file"],
   input[type="email"] {
-    padding: round($font-size / 1.08) round($font-size / 1.3);
-    transition: all .15s linear;
+    padding: round($font-size * 1.15);
+    transition: all .1s linear;
 
-    ~ label {
-      opacity: 0;
+    &.active {
+      padding-bottom: 0;
     }
   }
+  
+  // Ricontrollare questi campi
+  // input[type="week"],
+  // input[type="time"],
+  // input[type="datetime-local"],
+  // input[type="date"],
+  // input[type="color"] {
+  //   padding: round($font-size * 1.15) round($font-size * 1.15) 0;
 
-  input[type="week"],
-  input[type="time"],
-  input[type="datetime-local"],
-  input[type="date"],
-  input[type="color"] {
-    padding: round($font-size * 1.54) round($font-size / 1.3) round($font-size / 3.25);
-  }
+  //   & ~ label {
+  //     transform: translateY(-60%) scale(0.9);
+  //     opacity: 0.6;
+  //   }
+  // }
 
 }
 
@@ -142,43 +144,51 @@ $border-radius: 5px;
 
   label {
     @extend %label;
+    transform: translateY(-60%) scale(0.9);
+    transform-origin: left;
+    opacity: 0.6;
   }
 
   select {
     @extend %input;
-    padding: round($font-size * 1.54) round($font-size / 1.3) round($font-size / 3.25);
+    padding: round($font-size * 1.15) round($font-size * 1.15) 0;
   }
 
-  &:before {
-    content: '';
-    padding: $font-size * 1.73;
-    background-color: $background-color;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: $border-radius;
-    pointer-events: none;
-  }
+  // &:before {
+  //   content: '';
+  //   padding: $font-size * 1.73;
+  //   background-color: $background-color;
+  //   position: absolute;
+  //   top: 0;
+  //   right: round($font-size / 1.3);
+  //   border-radius: $border-radius;
+  //   pointer-events: none;
+  // }
 
-  &:after {
-    content: "\2BC6";
-    position: absolute;
-    top: 0;
-    right: round($font-size / 3.25);
-    margin: round($font-size / 1.3) 0;
-    padding-top: round($font-size / 3.25);
-    padding-right: round($font-size / 1.62);
-    padding-bottom: round($font-size / 3.25);
-    padding-left: round($font-size / 1.08);
-    background-color: $background-color;
-    border-left: 1px solid $border-color;
-    color: $grey-color;
-    font-size: round($font-size / 1.08);
-    pointer-events: none;
-  }
+  // &:after {
+  //   content: "\2BC6";
+  //   position: absolute;
+  //   top: 0;
+  //   right: round($font-size / 1.3);
+  //   margin: round($font-size / 1.3) 0;
+  //   padding-top: round($font-size / 3.25);
+  //   padding-right: round($font-size / 1.62);
+  //   padding-bottom: round($font-size / 3.25);
+  //   padding-left: round($font-size / 1.08);
+  //   background-color: $background-color;
+  //   border-left: 1px solid $border-color;
+  //   color: $grey-color;
+  //   font-size: round($font-size / 1.08);
+  //   pointer-events: none;
+  // }
 
 }
 
+// .select-icon {
+//   width: 50px;
+//   height: 50px;
+//   background-color: red;
+// }
 
 // ========================================
 // Radio style
@@ -273,6 +283,7 @@ $border-radius: 5px;
       color: $background-color;
       position: absolute;
       left: 20%;
+      font-family: sans-serif;
     }
   }
 

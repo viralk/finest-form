@@ -1,37 +1,42 @@
 // includes() non è compatibile con IE11, va cambiato con IndexOf
-function modifyInputStyle(input) {
-  input.style.padding = '20px 10px 4px';
-  input.nextElementSibling.style.opacity = '1';
+
+function hasClass(el, className) {
+  return el.classList ? el.classList.contains(className) : new RegExp('\\b' + className + '\\b').test(el.className);
 }
 
+function addClass(el, className) {
+  if (el.classList) el.classList.add(className);
+  else if (!hasClass(el, className)) el.className += ' ' + className;
+}
 
-function resetInputStyle(input) {
-  input.style.padding = '12px 10px';
-  input.nextElementSibling.style.opacity = '0';
+function removeClass(el, className) {
+  if (el.classList) el.classList.remove(className);
+  else el.className = el.className.replace(new RegExp('\\b' + className + '\\b', 'g'), '');
 }
 
 
 (function () {
-  const IGNORE_KEYS = [9, 13, 16, 17, 18, 19, 20, 27, 33, 34, 35, 36, 37, 38, 39, 40, 44, 45, 91, 92, 93, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 144, 145];
-  const RESET_KEYS = [8, 9, 46];
-
   const $input = document.querySelectorAll('.input-group input');
 
   for (let i = 0; i < $input.length; i += 1) {
-    $input[i].addEventListener('keyup', function (e) {
-      // Chek if the key pressed is not present inside the ignore keys array.
-      // If the key is not in the array i proceed to style it.
-      if (!IGNORE_KEYS.includes(e.keyCode)) {
-        modifyInputStyle(this);
-      }
-
-      // Check if the key pressed is present inside the reset keys array
-      // If the input has no value i proceed to reset the style of the input
-      if (RESET_KEYS.includes(e.keyCode)) {
-        if (!(this.value)) {
-          resetInputStyle(this);
-        }
+    $input[i].addEventListener('keyup', function () {
+      if (this.value) {
+        addClass(this, 'active');
+        addClass(this.nextElementSibling, 'active');
+      } else {
+        removeClass(this, 'active');
+        removeClass(this.nextElementSibling, 'active');
       }
     });
   }
 }());
+
+// (function () {
+//   const $select = document.querySelectorAll('.select-group select');
+//   const $el = document.createElement('span');
+//   $el.className = 'select-icon';
+
+//   for (let i = 0; i < $select.length; i += 1) {
+//     $select[i].parentNode.insertBefore($el, $select[i].nextSibling);
+//   }
+// }());
