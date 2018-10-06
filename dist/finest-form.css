@@ -1,10 +1,22 @@
 * {
   box-sizing: border-box; }
 
-::-webkit-input-placeholder,
-:-moz-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder,
+::-webkit-input-placeholder {
+  color: transparent;
+  opacity: 0; }
+
+:-moz-placeholder {
+  color: transparent;
+  opacity: 0; }
+
+::-moz-placeholder {
+  color: transparent;
+  opacity: 0; }
+
+:-ms-input-placeholder {
+  color: transparent;
+  opacity: 0; }
+
 ::-ms-input-placeholder {
   color: transparent;
   opacity: 0; }
@@ -20,6 +32,9 @@
   padding: inherit; }
 
 .input-group input[type], .select-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   border: 0;
   border-radius: 5px;
   background-color: #FFF;
@@ -72,6 +87,17 @@
     opacity: 0.6; }
   .select-group select {
     padding: 15px 15px 0; }
+  .select-group:after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-left: 1px solid #DDD;
+    color: #999;
+    font-size: 12px;
+    pointer-events: none; }
 
 .radio-group label {
   font-size: 13px;
@@ -135,7 +161,8 @@
   border-radius: 5px;
   padding: 0;
   border: 1px solid #DDD;
-  outline-color: transparent; }
+  outline-color: transparent;
+  outline-style: none; }
   .checkbox-group input[type="checkbox"]:checked {
     border-color: #53124A;
     box-shadow: 0 0 0 10px #53124A inset; }

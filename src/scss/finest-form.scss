@@ -39,10 +39,22 @@ $border-radius: 5px;
 // ========================================
 // Browser-compatibility
 // ========================================
-::-webkit-input-placeholder,
-:-moz-placeholder,
-::-moz-placeholder,
-:-ms-input-placeholder,
+::-webkit-input-placeholder {
+  color: transparent;
+  opacity: 0;
+}
+:-moz-placeholder {
+  color: transparent;
+  opacity: 0;
+}
+::-moz-placeholder {
+  color: transparent;
+  opacity: 0;
+}
+:-ms-input-placeholder {
+  color: transparent;
+  opacity: 0;
+}
 ::-ms-input-placeholder {
   color: transparent;
   opacity: 0;
@@ -63,6 +75,9 @@ $border-radius: 5px;
   padding: inherit;
 }
 %input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   border: 0;
   border-radius: $border-radius;
   background-color: $background-color;
@@ -165,22 +180,19 @@ $border-radius: 5px;
   //   pointer-events: none;
   // }
 
-  // &:after {
-  //   content: "\2BC6";
-  //   position: absolute;
-  //   top: 0;
-  //   right: round($font-size / 1.3);
-  //   margin: round($font-size / 1.3) 0;
-  //   padding-top: round($font-size / 3.25);
-  //   padding-right: round($font-size / 1.62);
-  //   padding-bottom: round($font-size / 3.25);
-  //   padding-left: round($font-size / 1.08);
-  //   background-color: $background-color;
-  //   border-left: 1px solid $border-color;
-  //   color: $grey-color;
-  //   font-size: round($font-size / 1.08);
-  //   pointer-events: none;
-  // }
+  &:after {
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: round($font-size / 1.3);
+    padding: round($font-size / 2.6) round($font-size * 1.15);
+    // background-color: $background-color;
+    border-left: 1px solid $border-color;
+    color: $grey-color;
+    font-size: round($font-size / 1.08);
+    pointer-events: none;
+  }
 
 }
 
@@ -272,6 +284,7 @@ $border-radius: 5px;
     padding: 0;
     border: 1px solid $border-color;
     outline-color: transparent;
+    outline-style: none;
 
     &:checked {
       border-color: $primary-color;
