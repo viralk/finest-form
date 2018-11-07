@@ -15,6 +15,7 @@ module.exports = {
       "wrap-iife": 0,
       "func-names": 0,
       "prefer-arrow-callback": 0,
-      "prefer-template": 0
+      "prefer-template": 0,
+      "no-console": 0
   }
 };

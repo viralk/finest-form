@@ -15,28 +15,36 @@ function removeClass(el, className) {
 }
 
 
+// (function () {
+//   const $input = document.querySelectorAll('.input-group input');
+
+//   for (let i = 0; i < $input.length; i += 1) {
+//     $input[i].addEventListener('keyup', function () {
+//       if (this.value) {
+//         addClass(this, 'active');
+//         addClass(this.nextElementSibling, 'active');
+//       } else {
+//         removeClass(this, 'active');
+//         removeClass(this.nextElementSibling, 'active');
+//       }
+//     });
+//   }
+// }());
+
+
 (function () {
   const $input = document.querySelectorAll('.input-group input');
 
   for (let i = 0; i < $input.length; i += 1) {
-    $input[i].addEventListener('keyup', function () {
-      if (this.value) {
-        addClass(this, 'active');
-        addClass(this.nextElementSibling, 'active');
-      } else {
+    $input[i].addEventListener('focus', function () {
+      addClass(this, 'active');
+      addClass(this.nextElementSibling, 'active');
+    });
+    $input[i].addEventListener('blur', function () {
+      if (!this.value) {
         removeClass(this, 'active');
         removeClass(this.nextElementSibling, 'active');
       }
     });
   }
 }());
-
-// (function () {
-//   const $select = document.querySelectorAll('.select-group select');
-//   const $el = document.createElement('span');
-//   $el.className = 'select-icon';
-
-//   for (let i = 0; i < $select.length; i += 1) {
-//     $select[i].parentNode.insertBefore($el, $select[i].nextSibling);
-//   }
-// }());
