@@ -33,9 +33,9 @@ To start using Finest-Form you need to include the relative css and js files in 
 
 - Internet Explorer 10+
 - Edge
-- Chrome
-- Firefox
-- Opera
+- Chrome 63+
+- Firefox 55+
+- Opera 48+
 - Safari
 
 Testing supported by<br>

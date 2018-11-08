@@ -1,30 +1,30 @@
-function hasClass(el, className) {
-  return el.classList ? el.classList.contains(className) : new RegExp('\\b' + className + '\\b').test(el.className);
+function hasClass(a, b) {
+  return a.classList ? a.classList.contains(b) : new RegExp('\\b' + b + '\\b').test(a.className);
 }
 
-function addClass(el, className) {
-  if (el.classList) el.classList.add(className);
-  else if (!hasClass(el, className)) el.className += ' ' + className;
+function addClass(a, b) {
+  if (a.classList) a.classList.add(b);
+  else if (!hasClass(a, b)) a.className += ' ' + b;
 }
 
-function removeClass(el, className) {
-  if (el.classList) el.classList.remove(className);
-  else el.className = el.className.replace(new RegExp('\\b' + className + '\\b', 'g'), '');
+function removeClass(a, b) {
+  if (a.classList) a.classList.remove(b);
+  else a.className = a.className.replace(new RegExp('\\b' + b + '\\b', 'g'), '');
 }
 
 (function () {
-  const $input = document.querySelectorAll('.input-group input');
+  var a = document.querySelectorAll('.input-group input');
 
-  for (let i = 0; i < $input.length; i += 1) {
-    $input[i].addEventListener('focus', function () {
+  for (var b = 0; b < a.length; b += 1) {
+    a[b].addEventListener('focus', function () {
       addClass(this, 'active');
       addClass(this.nextElementSibling, 'active');
     });
-    $input[i].addEventListener('blur', function () {
+    a[b].addEventListener('blur', function () {
       if (!this.value) {
         removeClass(this, 'active');
         removeClass(this.nextElementSibling, 'active');
       }
     });
   }
-}());
+})();
