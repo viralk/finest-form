@@ -25,6 +25,13 @@
 ::-ms-clear {
   display: none; }
 
+select::-ms-expand {
+  display: none; }
+
+select:focus::-ms-value {
+  color: inherit;
+  background: transparent; }
+
 .input-group label, .select-group label {
   font-size: 13px;
   position: absolute;

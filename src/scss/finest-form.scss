@@ -54,9 +54,18 @@ $border-radius: 5px;
   color: transparent;
   opacity: 0;
 }
-// Prevent the display of the "clear field" icon on ie
+// Prevent the display of the "clear field" icon on ie 10 / 11 / Edge
 ::-ms-clear {
   display: none;
+}
+// Prevent the display of the select arrow in ie 10 / 11 / Edge
+select::-ms-expand {
+  display: none;
+}
+// Prevent blue background in selected option when focused in ie 10 / 11 / Edge
+select:focus::-ms-value {
+  color: inherit;
+  background: transparent;
 }
 
 
