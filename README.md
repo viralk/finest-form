@@ -27,7 +27,7 @@ finest-form/
         └── finest-form.js
 ```
 
-To start using Finest-Form you must include the relative css and js files in your project. The files ready to be included are located inside the `dist/` folder. The files are available in standard and minified version. In the `src` folder you can find the sass file in which you can customize the sizing and appearance of the elements. Further instructions are located in the sass file.
+To start using Finest-Form you need to include the relative css and js files in your project. The files ready to be included are located inside the `dist/` folder. The files are available in standard and minified version. In the `src` folder you can find the sass file in which you can customize the sizing and appearance of the elements. Further instructions are located in the sass file.
 
 ## Compatibility
 
