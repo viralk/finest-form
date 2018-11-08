@@ -39,4 +39,6 @@ To start using Finest-Form you must include the relative css and js files in you
 - Safari
 
 Testing supported by<br>
+<a href="https://www.browserstack.com">
 <img width="160" src="https://live.browserstack.com/images/opensource/browserstack-logo.svg" alt="BrowserStack"/>
+</a>
