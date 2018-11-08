@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
-const uglify = require('gulp-uglify');
+const uglify = require('gulp-uglify-es').default;
 
 
 gulp.task('default', ['compile-js', 'compile-sass']);
