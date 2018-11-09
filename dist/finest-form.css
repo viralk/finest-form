@@ -60,6 +60,9 @@ select:focus::-ms-value {
   outline-style: none; }
   .input-group input:focus[type], .select-group select:focus {
     box-shadow: 0 0 0 2px #33C3F0; }
+  .input-group input:disabled[type], .select-group select:disabled {
+    background-color: #DDD;
+    cursor: not-allowed; }
 
 .input-group {
   position: relative; }
@@ -171,6 +174,10 @@ select:focus::-ms-value {
   .radio-group input[type="radio"]:checked {
     border-color: #33C3F0;
     box-shadow: 0 0 0 13px #33C3F0 inset; }
+  .radio-group input[type="radio"]:disabled {
+    box-shadow: 0 0 0 13px #DDD inset; }
+    .radio-group input[type="radio"]:disabled:after {
+      background-color: transparent; }
 
 .checkbox-group label {
   font-size: 13px;
@@ -206,6 +213,8 @@ select:focus::-ms-value {
     left: 20%;
     font-family: sans-serif;
     font-size: 13px; }
+  .checkbox-group input[type="checkbox"]:disabled {
+    box-shadow: 0 0 0 13px #DDD inset; }
 
 button,
 .button,
