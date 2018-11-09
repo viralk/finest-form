@@ -41,6 +41,7 @@ For the `<input>` elements you need to include a wrapper with `input-group` clas
   <label for="text">Text</label>
 </div>
 ```
+![Input example](finest-form/input_example.png)
 
 
 ### Select
@@ -84,6 +85,21 @@ include the `checkbox-group` class.
   <label for="check2">check2</label>
 </div>
 ```
+
+## Work in progress
+At this moment finest-form is a WIP project and not all form elements are supported, here you find a list of unsupported elements:
+- input type color
+- input type file
+- input type number
+- input type range
+- input type submit
+- input type reset
+- input type button
+- button
+- textarea
+- select with multiple values
+- datalist (html5)
+- output (html5)
 
 ## Compatibility
 
