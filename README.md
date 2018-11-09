@@ -41,7 +41,7 @@ For the `<input>` elements you need to include a wrapper with `input-group` clas
   <label for="text">Text</label>
 </div>
 ```
-![Input example](https://github.com/viralk/finest-form/blob/images/input_example.png)
+![Input example](https://github.com/viralk/finest-form/blob/master/img/input_example.png)
 
 
 ### Select
