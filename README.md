@@ -85,8 +85,6 @@ include the `checkbox-group` class.
 </div>
 ```
 
-##
-
 ## Compatibility
 
 - Internet Explorer 10+
