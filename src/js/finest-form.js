@@ -16,15 +16,23 @@ function removeClass(a, b) {
   var a = document.querySelectorAll('.input-group input');
 
   for (var b = 0; b < a.length; b += 1) {
+
+    if (a[b].value) {
+      addClass(a[b], 'active');
+      addClass(a[b].nextElementSibling, 'active');
+    }
+
     a[b].addEventListener('focus', function () {
       addClass(this, 'active');
       addClass(this.nextElementSibling, 'active');
     });
+
     a[b].addEventListener('blur', function () {
       if (!this.value) {
         removeClass(this, 'active');
         removeClass(this.nextElementSibling, 'active');
       }
     });
+
   }
 })();
