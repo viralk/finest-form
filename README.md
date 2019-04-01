@@ -104,10 +104,10 @@ At this moment finest-form is a WIP project and not all form elements are suppor
 ## Compatibility
 
 - Internet Explorer 10+
-- Edge
-- Chrome 63+
-- Firefox 55+
-- Opera 48+
+- Edge 15+
+- Chrome 40+
+- Firefox 44+
+- Opera 27+
 - Safari
 
 Testing supported by<br>
