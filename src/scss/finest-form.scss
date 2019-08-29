@@ -37,30 +37,37 @@ $border-radius: 5px;
   color: transparent;
   opacity: 0;
 }
+
 :-moz-placeholder {
   color: transparent;
   opacity: 0;
 }
+
 ::-moz-placeholder {
   color: transparent;
   opacity: 0;
 }
+
 :-ms-input-placeholder {
   color: transparent;
   opacity: 0;
 }
+
 ::-ms-input-placeholder {
   color: transparent;
   opacity: 0;
 }
+
 // Prevent the display of the "clear field" icon on ie 10 / 11 / Edge
 ::-ms-clear {
   display: none;
 }
+
 // Prevent the display of the select arrow in ie 10 / 11 / Edge
 select::-ms-expand {
   display: none;
 }
+
 // Prevent blue background in selected option when focused in ie 10 / 11 / Edge
 select:focus::-ms-value {
   color: inherit;
@@ -82,6 +89,7 @@ select:focus::-ms-value {
   pointer-events: none;
   padding: inherit;
 }
+
 %input {
   appearance: none;
   -webkit-appearance: none;
@@ -114,7 +122,7 @@ select:focus::-ms-value {
 // ============================================================================
 .input-group {
   position: relative;
-  
+
   label {
     @extend %label;
 
@@ -146,7 +154,7 @@ select:focus::-ms-value {
       padding-bottom: 0;
     }
   }
-  
+
   input[type="month"],
   input[type="week"],
   input[type="time"],
@@ -154,8 +162,8 @@ select:focus::-ms-value {
   input[type="date"],
   input[type="color"] {
     padding: round($font-size * 1.15) round($font-size * 1.15) 0;
-    
-    & ~ label {
+
+    &~label {
       transform: translateY(-60%) scale(0.9);
       opacity: 0.6;
     }
