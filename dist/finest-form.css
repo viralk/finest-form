@@ -83,6 +83,14 @@ input[type="button"],
   padding: 16px;
   font-weight: 700;
   cursor: pointer; }
+  button:focus,
+  .button:focus,
+  input:focus[type="submit"],
+  input:focus[type="reset"],
+  input:focus[type="button"],
+  .button-primary:focus,
+  .button-ghost:focus {
+    outline: none; }
 
 .input-group {
   position: relative; }
@@ -230,47 +238,6 @@ input[type="button"],
   .checkbox-group input[type="checkbox"]:disabled {
     box-shadow: 0 0 0 14px #DDD inset; }
 
-/*button,
-.button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  display: block;
-  width: 100%;
-  padding: round($font-size * 1.15) round($font-size * 1.92);
-  margin-bottom: round($font-size / 1.13);
-  border: 1px solid $border-color;
-  border-radius: 5px;
-  background-color: $background-color;
-  text-align: center;
-  font-weight: bolder;
-  font-size: $font-size;
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: 0 0 0 2px $border-color;
-  }
-
-  &:focus {
-    outline: 0;
-  }
-}
-
-.button-primary {
-  border-color: $primary-color;
-  background-color: $primary-color;
-  color: $background-color;
-
-  &:hover {
-    box-shadow: none;
-    opacity: .8;
-  }
-}
-
-.button-ghost {
-  border: 0;
-}
-*/
 .button-primary {
   background-color: #33C3F0;
   border-color: #33C3F0;
