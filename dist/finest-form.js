@@ -12,25 +12,15 @@ function removeClass(a, b) {
   else a.className = a.className.replace(new RegExp('\\b' + b + '\\b', 'g'), '');
 }
 
-
-
-
-
-
-function ffActive(el) {
-  if (el && el.value) {
-    addClass(el, 'active');
-    addClass(el.nextElementSibling, 'active');
-  }
-}
-
-
 (function () {
 
   // Add class active to all inputs with a starting value
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.input-group input').forEach(function (el) {
-      ffActive(el);
+      if (el && el.value) {
+        addClass(el, 'active');
+        addClass(el.nextElementSibling, 'active');
+      }
     });
   });
 
@@ -40,7 +30,10 @@ function ffActive(el) {
   XMLHttpRequest.prototype.open = function () {
     this.addEventListener('load', function () {
       document.querySelectorAll('.input-group input').forEach(function (el) {
-        ffActive(el);
+        if (el && el.value) {
+          addClass(el, 'active');
+          addClass(el.nextElementSibling, 'active');
+        }
       });
     });
     ajaxOpen.apply(this, arguments);
@@ -49,8 +42,9 @@ function ffActive(el) {
   // Add class active to all inputs that got a value after a state change of
   // the input without focusing on it, such as browser autocomplete
   document.addEventListener('change', function (e) {
-    if (e.target.parentNode.className == 'input-group') {
-      ffActive(e.target);
+    if (e.target.parentNode.className == 'input-group' && e.target.value) {
+      addClass(e.target, 'active');
+      addClass(e.target.nextElementSibling, 'active');
     }
   });
 

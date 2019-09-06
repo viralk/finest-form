@@ -32,15 +32,15 @@
     <label for="password">password</label>
   </div>
   <div class="input-group">
-    <input type="search" name="search" id="search">
+    <input type="search" name="search" id="search" class="success">
     <label for="search">search</label>
   </div>
   <div class="input-group">
-    <input type="tel" name="tel" id="tel">
+    <input type="tel" name="tel" id="tel" class="error">
     <label for="tel">tel</label>
   </div>
   <div class="input-group">
-    <input type="url" name="url" id="url">
+    <input type="url" name="url" id="url" disabled>
     <label for="url">url</label>
   </div>
 
@@ -103,6 +103,22 @@
   <!-- select -->
   <div class="select-group">
     <select name="select" id="select">
+      <option value="0" selected>0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+    <label for="select">select</label>
+  </div>
+  <div class="select-group">
+    <select name="select" id="select" class="success">
+      <option value="0" selected>0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+    <label for="select">select</label>
+  </div>
+  <div class="select-group">
+    <select name="select" id="select" class="error">
       <option value="0" selected>0</option>
       <option value="1">1</option>
       <option value="2">2</option>
