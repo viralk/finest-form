@@ -86,6 +86,10 @@ include the `checkbox-group` class.
 </div>
 ```
 
+## Helper classes
+There are two helper classes that can be used on `<input>` and `<select>` to help visualize validation: `.success` and `.error`
+![Helper classes](https://github.com/viralk/finest-form/blob/master/img/finest-form-success-error.png)
+
 ## Work in progress
 At this moment finest-form is a WIP project and not all form elements are supported, here you find a list of unsupported elements:
 - input type color
