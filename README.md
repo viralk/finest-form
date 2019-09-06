@@ -96,7 +96,6 @@ At this moment finest-form is a WIP project and not all form elements are suppor
 - input type file
 - input type number
 - input type range
-- textarea
 - select with multiple values
 - datalist (html5)
 - output (html5)

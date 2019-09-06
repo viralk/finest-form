@@ -85,7 +85,7 @@ select:focus::-ms-value {
   top: round($font-size * 1.15);
   left: round($font-size * 1.15);
   font-weight: 400;
-  transition: transform .1s ease-in-out;
+  transition: all .1s ease-in-out;
   transform-origin: top left;
   pointer-events: none;
   padding: inherit;
@@ -165,9 +165,9 @@ select:focus::-ms-value {
     @extend %label;
 
     &.active {
-      transform: translateY(-60%) scale(0.9);
+      transform: translateY(-50%) scale(0.9);
       transform-origin: left;
-      opacity: 0.6;
+      opacity: 0.5;
     }
   }
 
@@ -202,8 +202,20 @@ select:focus::-ms-value {
     padding: round($font-size * 1.15) round($font-size * 1.15) 0;
 
     &~label {
-      transform: translateY(-60%) scale(0.9);
-      opacity: 0.6;
+      transform: translateY(-50%) scale(0.9);
+      opacity: 0.5;
+    }
+  }
+
+  textarea {
+    @extend %input;
+    padding: round($font-size * 1.15);
+    height: auto;
+
+    &.active {
+      &~label {
+        opacity: 0;
+      }
     }
   }
 
@@ -218,9 +230,9 @@ select:focus::-ms-value {
 
   label {
     @extend %label;
-    transform: translateY(-60%) scale(0.9);
+    transform: translateY(-50%) scale(0.9);
     transform-origin: left;
-    opacity: 0.6;
+    opacity: 0.5;
   }
 
   select {
