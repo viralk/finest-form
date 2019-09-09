@@ -105,7 +105,7 @@ At this moment finest-form is a WIP project and not all form elements are suppor
 - Internet Explorer 10+
 - Edge 15+
 - Chrome 40+
-- Firefox 44+
+- Firefox 52+
 - Opera 27+
 - Safari
 

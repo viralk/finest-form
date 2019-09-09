@@ -14,14 +14,14 @@ function removeClass(a, b) {
 
 (function () {
 
-  // Add class active to all inputs with a starting value
   document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.input-group input').forEach(function (el) {
-      if (el && el.value) {
-        addClass(el, 'active');
-        addClass(el.nextElementSibling, 'active');
+    var el = document.querySelectorAll('.input-group input');
+    for (var i = 0; i < el.length; i++) {
+      if (el[i] && el[i].value) {
+        addClass(el[i], 'active');
+        addClass(el[i].nextElementSibling, 'active');
       }
-    });
+    }
   });
 
   // Add class active to all inputs with a starting value after an ajax request
@@ -29,12 +29,13 @@ function removeClass(a, b) {
   var ajaxOpen = XMLHttpRequest.prototype.open;
   XMLHttpRequest.prototype.open = function () {
     this.addEventListener('load', function () {
-      document.querySelectorAll('.input-group input').forEach(function (el) {
-        if (el && el.value) {
-          addClass(el, 'active');
-          addClass(el.nextElementSibling, 'active');
+      var el = document.querySelectorAll('.input-group input');
+      for (var i = 0; i < el.length; i++) {
+        if (el[i] && el[i].value) {
+          addClass(el[i], 'active');
+          addClass(el[i].nextElementSibling, 'active');
         }
-      });
+      }
     });
     ajaxOpen.apply(this, arguments);
   }
