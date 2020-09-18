@@ -43,7 +43,7 @@ function removeClass(a, b) {
   // Add class active to all inputs that got a value after a state change of
   // the input without focusing on it, such as browser autocomplete
   document.addEventListener('change', function (e) {
-    if (e.target.parentNode.className == 'input-group' && e.target.value) {
+    if (e.target.parentElement.classList.contains('input-group') && e.target.value) {
       addClass(e.target, 'active');
       addClass(e.target.nextElementSibling, 'active');
     }
@@ -51,7 +51,7 @@ function removeClass(a, b) {
 
   // Add class active to the focused input
   document.addEventListener('focusin', function (e) {
-    if (e.target.parentNode.className == 'input-group') {
+    if (e.target.parentElement.classList.contains('input-group')) {
       addClass(e.target, 'active');
       addClass(e.target.nextElementSibling, 'active');
     }
@@ -59,7 +59,7 @@ function removeClass(a, b) {
 
   // If there is no value i remove the active class from the input
   document.addEventListener('focusout', function (e) {
-    if (e.target.parentNode.className == 'input-group' && !e.target.value) {
+    if (e.target.parentElement.classList.contains('input-group') && !e.target.value) {
       removeClass(e.target, 'active');
       removeClass(e.target.nextElementSibling, 'active');
     }
